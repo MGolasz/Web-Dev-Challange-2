@@ -1,0 +1,35 @@
+.foot {
+    background-color: $grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $white;
+    height: 80px;
+    .copyrigth {
+        margin-left: 165px;
+        h2 {
+            font-size: 16px;
+            font-family: $Ral;
+            font-weight: $lite;
+            color: $lightgrey;
+        }
+    }
+
+    .foot-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .made-with {
+        margin-right: 165px;
+        h2 {
+            font-size: 16px;
+            font-family: $Ral;
+            font-weight: $lite;
+            color: $lightgrey;
+            strong {
+                color: $darkred;
+            }
+        }
+    }
+}

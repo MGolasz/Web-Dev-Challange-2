@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="39" viewBox="0 0 96 39">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 50px;
+        fill: #262626;
+        text-anchor: end;
+        font-family: Pacifico;
+      }
+    </style>
+  </defs>
+  <text id="logo" class="cls-1" x="91.999" y="34"><tspan x="91.999">Cahee</tspan></text>
+</svg>
