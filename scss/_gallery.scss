@@ -19,33 +19,118 @@
       }
 
       .gallery-alt-text {
+        padding: 0 10px 0 10px;
         font-size: 17px;
         font-family: $Ral;
         font-weight: $lite;
-        width: 570px;
         text-align: center;
+
+        @include mb-up(md) {
+          width: 570px;
+        }
       }
     }
 
     .gallery-img-wrapper {
-      justify-content: center;
+      align-items: center;
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column;
+
+      @include mb-up(md) {
+        flex-flow: column;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      @include mb-up(xl) {
+        flex-flow: row wrap;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0 auto;
+      }
 
       .gallery-img {
         margin: 15px;
         box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: auto;
+
+        @include mb-up(xs) {
+          max-width: 250px;
+          height: auto;
+        }
+
+        @include mb-up(sm) {
+          max-width: 350px;
+          height: auto;
+        }
+
+        @include mb-up(lg) {
+          max-width: 400px;
+          height: auto;
+        }
+
+        @include mb-up(xl) {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .gallery-wrap-row {
+        display: flex;
+        flex-direction: column;
+
+        @include mb-up(md) {
+          align-items: center;
+        }
+
+        @include mb-up(lg) {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        @include mb-up(xl) {
+          width: 100%;
+          flex-direction: row;
+        }
       }
 
       .gallery-wrap-hor {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include mb-up(md) {
+          flex-direction: row;
+        }
+
+        @include mb-up(lg) {
+          width: 100%;
+        }
+
+        @include mb-up(xl) {
+          flex-direction: column;
+          padding: 0 35px 0 5px;
+        }
       }
 
       .gallery-wrap-ver {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+
+        @include mb-up(xs) {
+          align-items: center;
+        }
+
+        @include mb-up(md) {
+          flex-direction: row;
+        }
+
+        @include mb-up(xl) {
+          flex-direction: row;
+        }
       }
     }
 

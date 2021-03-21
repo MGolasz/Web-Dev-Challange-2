@@ -1,19 +1,59 @@
 .about {
   background: $turq;
+
   .wrapper {
     display: flex;
     color: $white;
     font-family: $Ral;
+    flex-direction: column;
     justify-content: space-between;
-    max-height: 700px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    @include mb-up(md) {
+      flex-direction: row;
+      height: 700px;
+    }
+
+    .raspberries-img {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+
+      @include mb-up(md) {
+        width: 100%;
+      }
+
+      .about-img {
+        max-width: 50%;
+        height: auto;
+
+        @include mb-up(md) {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
     .about-text {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
+      margin: 20px;
+
+      @include mb-up(md) {
+        align-items: flex-start;
+        text-align: start;
+      }
+
       .about-title {
+        width: 100%;
         font-size: 90px;
       }
+
       .about-alt-text {
         font-size: 17px;
         font-weight: $lite;

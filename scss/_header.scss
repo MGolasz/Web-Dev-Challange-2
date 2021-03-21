@@ -1,10 +1,11 @@
 .header {
   background-color: $white;
   background: url('img/header-bg.png');
-  height: 100vh;
+  background-position: center;
+  height: 95vh;
 
   .wrapper {
-    height: 100vh;
+    height: 100%;
     font-family: Raleway;
     display: flex;
     flex-direction: column;
@@ -16,15 +17,31 @@
     }
 
     .nav {
+      margin-left: 20px;
       margin-top: 30px;
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       .nav-right {
+        display: none;
+
+        @include mb-up(lg) {
+          display: flex;
+          width: 80%;
+          justify-content: flex-end;
+        }
+
         .nav-list {
           @include reset-list;
           display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include mb-up(lg) {
+            flex-direction: row;
+          }
         }
 
         .nav-link {
@@ -37,8 +54,51 @@
           font-weight: 700;
 
           &:focus {
-            border-top: 4px solid orange;
+            border-top: 4px solid $orange;
           }
+        }
+      }
+
+      .show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        background-color: $white;
+        width: 100%;
+        z-index: 99;
+      }
+
+      .hamburger {
+        position: relative;
+        z-index: 999;
+        margin: 0 20px 0 0;
+        background: none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba($orange, 0.7);
+          border-radius: 20%;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        @include mb-up(lg) {
+          display: none;
+        }
+
+        .header-menu {
+          width: 100%;
+          height: auto;
+          display: block;
         }
       }
     }

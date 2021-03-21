@@ -3,23 +3,39 @@
 
   .wrapper {
     margin: 0;
-    height: 790px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
+
+    @include mb-up(md) {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 790px;
+    }
 
     .services-buttons {
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
       height: 100%;
+      order: 2;
+
+      @include mb-up(md) {
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        margin: 10px;
+      }
 
       .btn-wrapper {
         display: flex;
         width: 400px;
         height: 100px;
         background-color: $white;
-        margin: 15px 0 15px 0;
+        margin: 15px 0 35px 0;
         box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
 
         .btn {
@@ -44,16 +60,24 @@
     }
 
     .services-text {
-      width: 50%;
+      width: 100%;
+      margin: 50px 0 40px 0;
+      text-align: center;
       display: flex;
-      justify-content: center;
-      background-image: url('/img/tomato-slices.png');
-      background-repeat: no-repeat;
-      margin-top: 150px;
+      order: 1;
+
+      @include mb-up(md) {
+        margin: 0;
+        width: 50%;
+        align-items: center;
+        background-image: url('/img/tomato-slices.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        order: 2;
+      }
 
       .services-title {
-        margin-left: -80px;
-        margin-top: 200px;
+        width: 100%;
         font-family: $Ral;
         font-size: 90px;
         font-weight: $bold;
