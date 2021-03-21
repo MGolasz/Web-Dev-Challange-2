@@ -1,65 +1,71 @@
-.gallery{
+.gallery {
+  background-color: $yel;
+
+  .wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    background-color: $yel;
-    .gallery-text {
-        margin-top: 50px;
-        margin-bottom: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h2 {
-            font-size: 90px;
-            font-family: $Ral;
-            font-weight: bold;
-        }
 
-        h3 {
-            font-size: 17px;
-            font-family: $Ral;
-            font-weight: $lite;
-            width: 570px;
-            text-align: center;
-        }
+    .gallery-text {
+      margin-top: 50px;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .gallery-title {
+        font-size: 90px;
+        font-family: $Ral;
+        font-weight: bold;
+      }
+
+      .gallery-alt-text {
+        font-size: 17px;
+        font-family: $Ral;
+        font-weight: $lite;
+        width: 570px;
+        text-align: center;
+      }
     }
 
-    .gallery-img-box {
-        justify-content: center;
+    .gallery-img-wrapper {
+      justify-content: center;
+      display: flex;
+      flex-flow: row wrap;
+
+      .gallery-img {
+        margin: 15px;
+        box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
+      }
+
+      .gallery-wrap-hor {
         display: flex;
-        flex-flow: row wrap;
-        img {
-            margin: 15px;
-            box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
-        }
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-        .gallery-wrap-hor {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .gallery-wrap-ver {
-            display: flex;
-            justify-content: space-between;
-        }
+      .gallery-wrap-ver {
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
     .gallery-btn {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
-        margin-top: 30px;
-        .btn-view {
-            border: none;
-            font-family: $Ral;
-            font-size: 20px;
-            font-weight: $lite;
-            background-color: $blue;
-            color: $white;
-            box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
-            width: 200px;
-            height: 55px;
-        }
+      display: flex;
+      justify-content: center;
+      margin-bottom: 100px;
+      margin-top: 30px;
+
+      .btn-view {
+        border: none;
+        font-family: $Ral;
+        font-size: 20px;
+        font-weight: $lite;
+        background-color: $blue;
+        color: $white;
+        box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
+        width: 200px;
+        height: 55px;
+      }
     }
+  }
 }

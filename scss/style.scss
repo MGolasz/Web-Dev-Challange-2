@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;900&display=swap');
 
 @import './variables';
+@import './breakpoints';
 @import './mixins';
 @import './header';
 @import './about';
@@ -12,8 +13,14 @@
 @import './footer';
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 100%;
 }
 
 // sass --watch scss/style.scss ./style.css
