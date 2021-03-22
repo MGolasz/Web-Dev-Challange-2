@@ -58,9 +58,13 @@
 
           .contact-input-big {
             background-color: rgba($blueish, 0.3);
-            width: 500px;
+            width: 80%;
             height: 250px;
             margin: 20px;
+
+            @include mb-up(md) {
+              width: 500px;
+            }
 
             .contact-message {
               border: none;
@@ -78,9 +82,13 @@
 
           .contact-input-small {
             background-color: rgba($blueish, 0.3);
-            width: 500px;
+            width: 80%;
             height: 50px;
             margin: 20px;
+
+            @include mb-up(md) {
+              width: 500px;
+            }
 
             input {
               border: none;
